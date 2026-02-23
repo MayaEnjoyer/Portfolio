@@ -1,156 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hi^_^</title>
-    <style>
-        :root{
-            --bg:#11161c; --card:#171d24; --ink:#eef2f6; --muted:#a8b3c5; --line:#243042;
-        }
-        *{box-sizing:border-box}
-        html,body{height:100%}
-        body{
-            margin:0; background:var(--bg); color:var(--ink);
-            font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-            overflow-x:hidden;
-        }
 
-        .wrap{
-            max-width:1220px; margin:0 auto; min-height:100vh;
-            display:flex; align-items:center; padding:56px 24px; position:relative; z-index:1;
-        }
-        .col-left{flex:0 0 58%; padding-right:32px}
-        .col-right{flex:1; padding-left:32px; border-left:1px solid var(--line)}
-        .bar{width:140px; height:8px; background:var(--line); border-radius:6px; margin:0 0 28px 0}
+    <title>Maksym Hubar — AI Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Maksym Hubar — AI Engineer & Software Developer. Practical ML systems, RAG pipelines, CV prototypes, and production web apps." />
+    <meta name="theme-color" content="#11161c" />
 
-        .title h1{margin:0 0 18px 0; font-weight:800; font-size:64px; letter-spacing:.2px}
-        .lead{color:var(--muted); margin:0 0 28px 0}
-        .lead br{content:""}
+    <meta property="og:title" content="Maksym Hubar — AI Engineer Portfolio" />
+    <meta property="og:description" content="Practical ML systems, RAG pipelines, CV prototypes, and production web apps." />
+    <meta property="og:type" content="website" />
 
-        .tag-pre{
-            display:inline-block; background:var(--card); border:1px solid var(--line);
-            padding:10px 14px; border-radius:10px; color:var(--muted); font-size:14px; margin-top:10px
-        }
-        pre{margin:0; white-space:pre-wrap}
-
-        /* Right column */
-        .eyebrow{font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:14px; color:var(--muted); margin-bottom:8px}
-        .sec{margin:18px 0 36px}
-
-        /* Socials */
-        .social{margin-top:8px; display:flex; gap:18px}
-        .social a{display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:var(--card); border:1px solid var(--line); text-decoration:none}
-        .social svg{width:20px; height:20px; fill:var(--ink)}
-
-
-        /* Right photo */
-        .photo-wrap{
-            position:fixed;  right:-1vw; bottom:0;
-            pointer-events:none; z-index:0;
-        }
-        .photo{
-            width:min(46vw, 720px);
-            max-height:92vh; height:auto;
-            filter:drop-shadow(0 28px 60px rgba(0,0,0,.6));
-        }
-
-        /* Left photo */
-        .photo-left-wrap{
-            position:fixed;  left:-4vw; bottom:0;
-            pointer-events:none; z-index:0;
-        }
-        .photo-left{
-            width:min(46vw, 720px);
-            max-height:92vh; height:auto;
-            filter:drop-shadow(0 28px 60px rgba(0,0,0,.6));
-            opacity:.95;
-        }
-
-        @media (max-width:1200px){
-            .photo-wrap{right:-14vw; opacity:.28;}
-            .photo{width:min(42vw, 640px)}
-            .photo-left-wrap{left:-18vw; opacity:.28;}
-            .photo-left{width:min(32vw, 500px)}
-        }
-        @media (max-width:1060px){
-            .wrap{padding-top:96px}
-            .photo-wrap{right:-18vw; bottom:-4vh; opacity:.22;}
-            .photo-left-wrap{left:-22vw; bottom:-4vh; opacity:.22;}
-            .col-left{flex:1}
-        }
-        @media (max-width:780px){
-            .wrap{flex-direction:column; align-items:flex-start}
-            .col-left,.col-right{flex:unset; width:100%; padding:0; border:0}
-            .title h1{font-size:44px}
-            .photo-wrap,.photo-left-wrap{display:none}
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-<div class="wrap">
-    <div class="col-left">
-        <div class="bar" aria-hidden="true"></div>
 
-        <div class="title">
-            <h1>I’m Maksym,<br>a AI Engineer</h1>
+<body id="top">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="brand">
+            <h1 class="brand-title">Maksym Hubar</h1>
+            <p class="brand-subtitle">AI Engineer • Software Developer</p>
         </div>
 
-        <p class="lead">
-            4th-year Software Development student and AI engineer. I design, train and deploy practical ML systems and AI-powered backends, and I have commercial experience in web development.<br>
-           Available worldwide.
-        </p>
-
-
-        <div class="tag-pre">
-        <pre>// stack
-Python • PyTorch • NumPy • LangChain • OpenAI API • FastAPI • Docker • Linux (Kali) • Git • SQL • Spark • HTML • CSS • JS • Node.js </pre>
-        </div>
+        <nav class="nav" aria-label="Primary navigation">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#work">Work</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <div class="col-right">
-        <div class="sec">
-            <div class="eyebrow">About me</div>
-            <p class="lead">I’m an 18-year-old AI engineer and a 4th-year student at the Kyiv College of Communications (Software Development).
-                My main focus is applied AI/ML—designing, training and deploying models and AI-powered backends.
-                I also have commercial experience building websites. I care about clean architecture, performance and maintainability.</p>
+<main id="main" class="site-main">
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+            <div class="hero-left">
+                <div class="bar" aria-hidden="true"></div>
+
+                <h2 id="hero-title" class="hero-title">
+                    Hi, I’m Maksym —<br />AI Engineer
+                </h2>
+
+                <p class="hero-lead">
+                    I’m a <strong>4th-year Software Development student</strong> and an AI/ML engineer.
+                    I design, train, and deploy practical ML systems and AI-powered backends, and I also have commercial experience building web applications.<br />
+                    Available for collaboration <em>worldwide</em>.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn" href="#contact">Get in touch</a>
+                    <a class="btn btn-ghost" href="https://github.com/MayaEnjoyer" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <article class="card">
+                    <h3 class="card-title">What I build</h3>
+                    <ul class="list">
+                        <li>NLP / chatbots / RAG pipelines</li>
+                        <li>Computer Vision prototypes</li>
+                        <li>Data engineering workflows</li>
+                        <li>Production web apps (when needed)</li>
+                    </ul>
+                </article>
+
+                <hr class="hr" />
+
+                <article class="card">
+                    <h3 class="card-title">How I work</h3>
+                    <ol class="list">
+                        <li>Define requirements and measurable quality metrics</li>
+                        <li>Design architecture, prototype fast, validate assumptions</li>
+                        <li>Optimize for performance, security, and maintainability</li>
+                        <li>Deploy, monitor, document, iterate</li>
+                    </ol>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div class="sec">
-            <div class="eyebrow">My work</div>
-            <p class="lead">  I work on NLP/chatbots, RAG pipelines, computer-vision prototypes and data engineering, plus production web apps when needed.
+    <hr class="divider" />
+
+    <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" class="section-title">About</h2>
+            <p class="section-text">
+                My focus is applied AI/ML — delivering real solutions end-to-end. I care about <strong>clean architecture</strong>,
+                reliability, security, and speed. I build systems that remain maintainable months and years later.
+            </p>
+            <p class="section-text">
+                Alongside AI, I keep a strong web foundation: HTML/CSS/JS, Node.js, APIs, and databases.
+                I like clean UI, solid semantics, and accessibility-first implementation.
+            </p>
+            <p class="section-text">
+                I’m comfortable working with teams or solo, writing clear documentation, and shipping production-grade code.
             </p>
         </div>
+    </section>
 
-        <div class="sec">
-            <div class="eyebrow">Follow me</div>
-            <div class="social">
-                <!-- LinkedIn -->
-                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/губар-максим-323295324" target="_blank" rel="noreferrer">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.77 2.65 4.77 6.1V21H17v-4.9c0-1.17-.02-2.68-1.64-2.68-1.64 0-1.89 1.28-1.89 2.6V21H9z"/></svg>
+    <hr class="divider" />
+
+    <section id="work" class="section" aria-labelledby="work-title">
+        <div class="container">
+            <h2 id="work-title" class="section-title">Work</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <h3 class="card-title">AI / ML</h3>
+                    <p class="card-text">
+                        Model training, evaluation, data pipelines, and production deployment.
+                        I prefer a metric-driven approach: validate quickly, measure, then scale.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Back-end</h3>
+                    <p class="card-text">
+                        Secure APIs and services with stable contracts: auth, roles, logging,
+                        rate-limits, and predictable integration between front-end and back-end.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Front-end</h3>
+                    <p class="card-text">
+                        Responsive UI with clean typography, spacing, and accessibility.
+                        I ship interfaces that look professional and behave consistently across devices.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="container">
+            <h2 id="projects-title" class="section-title">Projects</h2>
+            <p class="section-text">
+                A selection of practical work across AI/ML and web engineering. Each project is built with
+                production constraints in mind: reliability, observability, and maintainability.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3 class="card-title">RAG Assistant</h3>
+                    <p class="card-text">
+                        Retrieval-augmented generation pipeline with structured ingestion and evaluation.
+                    </p>
+                    <hr class="hr" />
+                    <ul class="list">
+                        <li>Chunking + embeddings + vector search</li>
+                        <li>Grounded answers with citations</li>
+                        <li>Latency-focused API design</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Computer Vision Prototype</h3>
+                    <p class="card-text">
+                        Real-time CV prototype with a clean inference pipeline and repeatable experiments.
+                    </p>
+                    <hr class="hr" />
+                    <ul class="list">
+                        <li>Dataset curation and preprocessing</li>
+                        <li>Model training and validation loops</li>
+                        <li>Deployment-ready inference</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Web App Backend</h3>
+                    <p class="card-text">
+                        Secure backend with role-based access and predictable REST contracts.
+                    </p>
+                    <hr class="hr" />
+                    <ul class="list">
+                        <li>JWT auth + roles</li>
+                        <li>Input validation + logging</li>
+                        <li>Dockerized services</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="container">
+            <h2 id="skills-title" class="section-title">Skills</h2>
+
+            <p class="section-text">
+                Core stack: <strong>Python</strong>, PyTorch, NumPy, LangChain, OpenAI API, FastAPI, Docker, Linux, Git, SQL,
+                Spark, HTML, CSS, JavaScript, Node.js.
+            </p>
+
+            <div class="pillbox" role="list" aria-label="Skills list">
+                <span class="pill" role="listitem">Python</span>
+                <span class="pill" role="listitem">PyTorch</span>
+                <span class="pill" role="listitem">NumPy</span>
+                <span class="pill" role="listitem">LangChain</span>
+                <span class="pill" role="listitem">OpenAI API</span>
+                <span class="pill" role="listitem">FastAPI</span>
+                <span class="pill" role="listitem">Docker</span>
+                <span class="pill" role="listitem">Linux</span>
+                <span class="pill" role="listitem">Git</span>
+                <span class="pill" role="listitem">SQL</span>
+                <span class="pill" role="listitem">HTML</span>
+                <span class="pill" role="listitem">CSS</span>
+                <span class="pill" role="listitem">JavaScript</span>
+                <span class="pill" role="listitem">Node.js</span>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title">Contact</h2>
+
+            <p class="section-text">
+                Feel free to reach out for AI/ML or web development work.<br />
+                Email: <a class="inline-link" href="mailto:mgdldgfggd@gmail.com">mgdldgfggd@gmail.com</a>
+            </p>
+
+            <div class="social" aria-label="Social links">
+                <a class="social-link" aria-label="LinkedIn" href="https://www.linkedin.com/in/maksym-hubar-323295324" target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.77 2.65 4.77 6.1V21H17v-4.9c0-1.17-.02-2.68-1.64-2.68-1.64 0-1.89 1.28-1.89 2.6V21H9z"/>
+                    </svg>
                 </a>
-                <!-- GitHub -->
-                <a aria-label="GitHub" href="https://github.com/MayaEnjoyer" target="_blank" rel="noreferrer">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.08 1.86 1.26 1.86 1.26 1.08 1.85 2.84 1.31 3.53 1 .11-.8.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.37 1.25-3.21-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.86.12 3.16.78.84 1.25 1.91 1.25 3.21 0 4.58-2.8 5.6-5.47 5.9.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.58A12 12 0 0 0 12 .5z"/></svg>
+
+                <a class="social-link" aria-label="GitHub" href="https://github.com/MayaEnjoyer" target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.08 1.86 1.26 1.86 1.26 1.08 1.85 2.84 1.31 3.53 1 .11-.8.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.37 1.25-3.21-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.86.12 3.16.78.84 1.25 1.91 1.25 3.21 0 4.58-2.8 5.6-5.47 5.9.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.58A12 12 0 0 0 12 .5z"/>
+                    </svg>
                 </a>
-                <!-- Gmail -->
-                <a target="_blank" rel="noopener"
+
+                <a class="social-link" aria-label="Email via Gmail" target="_blank" rel="noopener"
                    href="https://mail.google.com/mail/?view=cm&fs=1&to=mgdldgfggd@gmail.com&su=Hello&body=Hi%20Maksym">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/>
+                    </svg>
                 </a>
             </div>
         </div>
+    </section>
+
+    <div class="photo photo-right" aria-hidden="true">
+        <img src="assets/image/profile_image.png" alt="" loading="lazy" />
     </div>
-</div>
 
-<!-- Right photo -->
-<div class="photo-wrap" aria-hidden="true">
-    <img class="photo" src="assets/image/profile_image.png" alt="Profile photo right" />
-</div>
+    <div class="photo photo-left" aria-hidden="true">
+        <img src="assets/image/profile_image2.png" alt="" loading="lazy" />
+    </div>
+</main>
 
-<!-- Left photo -->
-<div class="photo-left-wrap" aria-hidden="true">
-    <img class="photo-left" src="assets/image/profile_image2.png" alt="Profile photo left" />
-</div>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p class="footer-text">© 2026 Maksym Hubar.</p>
+        <p class="footer-muted">
+            Location:<br />
+            Bratislava, Slovakia
+        </p>
+    </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Back to top">
+    <span class="to-top__text">Up</span>
+    <svg class="to-top__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8L6.4 13.4 5 12z"/>
+    </svg>
+</button>
+
+<script>
+    (() => {
+        const btn = document.querySelector('.to-top');
+        const header = document.querySelector('.site-header');
+
+        const setHeaderHeightVar = () => {
+            if (!header) return;
+            const h = Math.ceil(header.getBoundingClientRect().height);
+            document.documentElement.style.setProperty('--header-h', `${h}px`);
+        };
+
+        setHeaderHeightVar();
+        window.addEventListener('resize', setHeaderHeightVar, { passive: true });
+
+        if (!btn) return;
+
+        const toggle = () => {
+            btn.classList.toggle('is-visible', window.scrollY > 260);
+        };
+
+        toggle();
+        window.addEventListener('scroll', toggle, { passive: true });
+
+        btn.addEventListener('click', () => {
+            document.getElementById('top')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    })();
+</script>
 </body>
 </html>
